@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pembukuan PWA</title>
+    <title>SRF Pembukuan</title>
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="splash"><div class="logo">P</div></div>
+    <div id="splash"><div class="logo">SRF</div></div>
     
     <div id="app">
         <header>
@@ -18,17 +18,17 @@
         </header>
         <main id="content">
             <div class="card">
-                <h3>Selamat Datang</h3>
-                <p>Klik tombol + untuk mulai menambah data nota.</p>
+                <h3>Selamat Datang di SRF</h3>
+                <p>Sistem Pembukuan Modern.</p>
             </div>
         </main>
         <button id="fab">+</button>
     </div>
 
     <nav id="drawer">
-        <div style="padding:20px;"><h3>Menu</h3></div>
-        <button class="nav-link" onclick="alert('Dashboard')">Dashboard</button>
-        <button class="nav-link" onclick="alert('Laporan')">Laporan</button>
+        <div class="drawer-header"><h2>SRF App</h2></div>
+        <button class="menu-item" onclick="app.navigate('dashboard')">Dashboard</button>
+        <button class="menu-item" onclick="app.navigate('nota')">Data Nota</button>
     </nav>
     <div id="overlay"></div>
 
