@@ -6,28 +6,32 @@
     <title>Pembukuan PWA</title>
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="style.css">
-    <meta name="theme-color" content="#2563eb">
 </head>
 <body>
     <div id="splash"><div class="logo">P</div></div>
+    
     <div id="app">
         <header>
             <button id="menuBtn">☰</button>
-            <h2>Pembukuan</h2>
+            <h2 id="pageTitle">Dashboard</h2>
             <button id="searchBtn">🔍</button>
         </header>
-        <div id="searchBar"><input type="text" id="searchInput" placeholder="Cari nota..."></div>
-        <main id="content"></main>
+        <main id="content">
+            <div class="card">
+                <h3>Selamat Datang</h3>
+                <p>Klik tombol + untuk mulai menambah data nota.</p>
+            </div>
+        </main>
         <button id="fab">+</button>
     </div>
+
     <nav id="drawer">
-        <div class="drawer-header"><h2>Menu</h2></div>
-        <button onclick="router.navigate('dashboard')">Dashboard</button>
-        <button onclick="router.navigate('nota')">Data Nota</button>
-        <button onclick="dataManager.exportJSON()">Export JSON</button>
+        <div style="padding:20px;"><h3>Menu</h3></div>
+        <button class="nav-link" onclick="alert('Dashboard')">Dashboard</button>
+        <button class="nav-link" onclick="alert('Laporan')">Laporan</button>
     </nav>
     <div id="overlay"></div>
-    <div id="toast"></div>
-    <script type="module" src="app.js"></script>
+
+    <script src="app.js"></script>
 </body>
 </html>
